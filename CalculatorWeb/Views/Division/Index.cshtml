@@ -5,6 +5,11 @@
 <h1>Division</h1>
 
 <form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <p class="text-danger">@ViewBag.ErrorMessage</p>
+    }
     <div>
         <label class="form-label" asp-for="FirstNumber">FirstNumber</label>
         <input class="form-control" asp-for="FirstNumber" />
@@ -23,6 +28,8 @@
     <div>
         <a class="btn btn-secondary" asp-controller="Division" asp-action="Index">Clear</a>
     </div>
+
+    
 
 </form>
 
