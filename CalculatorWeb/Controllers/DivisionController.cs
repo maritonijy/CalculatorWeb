@@ -11,9 +11,9 @@ namespace CalculatorWeb.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(Division d1, int firstNumber, int secondNumber)
+        public IActionResult Index(Division d1)
         {
-            if (secondNumber == 0)
+            if (d1.SecondNumber == 0)
             {
                 ViewBag.ErrorMessage = "Division by zero is not allowed.";
                 return View();
